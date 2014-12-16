@@ -1,0 +1,34 @@
+src/*.exe
+src/senden
+src/sendend
+src/test_senden
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.senden
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+senden-qt
+Senden-Qt.app
+
+# Unit-tests
+Makefile.test
+senden-qt_test
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
+.DS_Store
+build
+
+!src/leveldb*/Makefile

@@ -1,0 +1,9 @@
+Building Senden
+
+See doc/readme-qt.rst for instructions on building Senden-Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Senden.
+
+See doc/build-*.txt for instructions on building sendend,
+the intended-for-services, no-graphical-interface, reference
+implementation of Senden.
