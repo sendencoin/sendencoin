@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x319dbca08461dd1ad4491d54461c59e6d36de73541a917adc61f8bf81b9dc2dc");
+uint256 hashGenesisBlock("0xae513741c89921f536be44e151060bcd7510440489dc9eb508f2270e20832aa7");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Senden: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2746,7 +2746,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xc4;
         pchMessageStart[2] = 0xb2;
         pchMessageStart[3] = 0xd8;
-        hashGenesisBlock = uint256("0x319dbca08461dd1ad4491d54461c59e6d36de73541a917adc61f8bf81b9dc2dc");
+        hashGenesisBlock = uint256("0xae513741c89921f536be44e151060bcd7510440489dc9eb508f2270e20832aa7");
     }
 
     //
@@ -2793,12 +2793,12 @@ bool InitBlockIndex() {
         block.nVersion = 1;
         block.nTime    = 1418695155;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 615810;
+        block.nNonce   = 5125805;
 
         if (fTestNet)
         {
             block.nTime    = 1418695174;
-            block.nNonce   = 615810;
+            block.nNonce   = 5125805;
         }
 
         //// debug print
@@ -2808,7 +2808,7 @@ bool InitBlockIndex() {
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
         assert(block.hashMerkleRoot == uint256("0xfbb7f84caad2498ba517c8965fb3c912aa9a093f998fd01bc514a2d6c547ed82"));
 
- if (true && block.GetHash() != hashGenesisBlock)
+        /*if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -2837,9 +2837,7 @@ bool InitBlockIndex() {
             printf("block.nNonce = %u \n", block.nNonce);
             printf("block.GetHash = %s\n", block.GetHash().ToString().c_str());
             
-            }
-
-
+        }*/
         
         block.print();
         assert(hash == hashGenesisBlock);
